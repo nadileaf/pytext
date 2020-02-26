@@ -39,3 +39,5 @@ pytext/docs/source/modules/*
 
 # data
 demo/rpc_service/data
+# idea
+.idea/*
