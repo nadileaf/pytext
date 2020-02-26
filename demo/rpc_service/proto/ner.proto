@@ -1,0 +1,30 @@
+syntax = "proto3";
+package ner;
+
+service NER {
+    rpc TagTexts(TextBatch) returns (EntitiesBatch);
+    rpc TagText(Text) returns (Entities);
+}
+
+message Text {
+    string text = 1;
+}
+
+message TextBatch {
+    repeated string texts = 1;
+}
+
+message Entity {
+    string value = 1;
+    int32 start = 2;
+    int32 end = 3;
+    string entity = 4;
+}
+
+message Entities {
+    repeated Entity entities = 1;
+}
+
+message EntitiesBatch{
+    repeated Entities entities_batch = 1;
+}

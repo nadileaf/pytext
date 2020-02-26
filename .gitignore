@@ -36,3 +36,6 @@ venv.bak/
 # Generated Document Sources
 pytext/docs/source/configs/*
 pytext/docs/source/modules/*
+
+# data
+demo/rpc_service/data
